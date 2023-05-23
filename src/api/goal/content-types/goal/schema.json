@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "goals",
+  "info": {
+    "singularName": "goal",
+    "pluralName": "goals",
+    "displayName": "Home Section Goals",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Tabs": {
+      "displayName": "Tabs",
+      "type": "component",
+      "repeatable": true,
+      "component": "tab.tabs"
+    }
+  }
+}

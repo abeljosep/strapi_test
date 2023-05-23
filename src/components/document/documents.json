@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_document_documents",
+  "info": {
+    "displayName": "Documents",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "Files": {
+      "type": "component",
+      "repeatable": true,
+      "component": "files.file"
+    }
+  }
+}

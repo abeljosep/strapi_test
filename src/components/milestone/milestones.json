@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_milestone_milestones",
+  "info": {
+    "displayName": "milestones",
+    "icon": "seedling",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "LeftText": {
+      "type": "string",
+      "required": false
+    },
+    "RightText": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

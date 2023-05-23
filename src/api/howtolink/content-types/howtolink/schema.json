@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "howtolinks",
+  "info": {
+    "singularName": "howtolink",
+    "pluralName": "howtolinks",
+    "displayName": "HowTo Links",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "see_requirement_link": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "files"
+      ]
+    },
+    "fill_form_link": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "files"
+      ]
+    }
+  }
+}

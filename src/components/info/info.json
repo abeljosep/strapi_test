@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_info_infos",
+  "info": {
+    "displayName": "Info",
+    "icon": "info"
+  },
+  "options": {},
+  "attributes": {
+    "RightSide": {
+      "displayName": "RightSide",
+      "type": "component",
+      "repeatable": true,
+      "component": "rightside.right-side"
+    },
+    "LeftSide": {
+      "displayName": "LeftSide",
+      "type": "component",
+      "repeatable": true,
+      "component": "leftside.left-side"
+    }
+  }
+}

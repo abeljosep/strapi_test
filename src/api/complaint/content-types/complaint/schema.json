@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "complaints",
+  "info": {
+    "singularName": "complaint",
+    "pluralName": "complaints",
+    "displayName": "Complaint",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstname": {
+      "type": "string",
+      "required": true
+    },
+    "lastname": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "message": {
+      "type": "text",
+      "required": true
+    },
+    "complaint_firstname": {
+      "type": "string",
+      "required": true
+    },
+    "complaint_lastname": {
+      "type": "string",
+      "required": true
+    },
+    "complaint_second_lastname": {
+      "type": "string",
+      "required": true
+    },
+    "complaint_relation": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

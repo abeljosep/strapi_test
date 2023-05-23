@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_tab_tabs",
+  "info": {
+    "displayName": "Tabs",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "background": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "Item": {
+      "type": "component",
+      "repeatable": true,
+      "component": "item.item"
+    }
+  }
+}

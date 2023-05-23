@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "archives",
+  "info": {
+    "singularName": "archive",
+    "pluralName": "archives",
+    "displayName": "Archives",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fundTitleRef": {
+      "type": "string"
+    },
+    "Documents": {
+      "type": "component",
+      "repeatable": true,
+      "component": "document.documents"
+    }
+  }
+}

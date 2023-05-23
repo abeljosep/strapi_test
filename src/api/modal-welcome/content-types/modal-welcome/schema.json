@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "modal_welcomes",
+  "info": {
+    "singularName": "modal-welcome",
+    "pluralName": "modal-welcomes",
+    "displayName": "modalWelcome",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "carousel": {
+      "displayName": "slider",
+      "type": "component",
+      "repeatable": true,
+      "component": "slider.slider"
+    }
+  }
+}

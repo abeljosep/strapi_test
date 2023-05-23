@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_profile_profiles",
+  "info": {
+    "displayName": "Profiles",
+    "icon": "address-card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "fullname": {
+      "type": "string",
+      "required": true
+    },
+    "picture": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "role": {
+      "type": "string",
+      "required": true
+    },
+    "linkedin": {
+      "type": "string",
+      "required": false
+    },
+    "body": {
+      "type": "richtext",
+      "required": false
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "claims",
+  "info": {
+    "singularName": "claim",
+    "pluralName": "claims",
+    "displayName": "Claim",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstname": {
+      "type": "string",
+      "required": true
+    },
+    "lastname": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "message": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

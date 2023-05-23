@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_category_categories",
+  "info": {
+    "displayName": "Category",
+    "icon": "file-pdf",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "archive": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::archive.archive"
+    }
+  }
+}

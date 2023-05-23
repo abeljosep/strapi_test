@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_doc_docs",
+  "info": {
+    "displayName": "docs",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string",
+      "required": true
+    },
+    "docNumber": {
+      "type": "integer",
+      "required": true,
+      "max": 999
+    },
+    "date": {
+      "type": "date"
+    },
+    "pdf": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "files"
+      ]
+    }
+  }
+}

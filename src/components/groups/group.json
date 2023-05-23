@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_groups_groups",
+  "info": {
+    "displayName": "group",
+    "icon": "users-cog",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "Members": {
+      "type": "component",
+      "repeatable": true,
+      "component": "profile.profiles"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_actives_actives",
+  "info": {
+    "displayName": "Actives",
+    "icon": "store-alt",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "properties": {
+      "displayName": "Properties",
+      "type": "component",
+      "repeatable": true,
+      "component": "property.properties"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "slideshows",
+  "info": {
+    "singularName": "slideshow",
+    "pluralName": "slideshows",
+    "displayName": "Home Section Slideshow",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Slider": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "title": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

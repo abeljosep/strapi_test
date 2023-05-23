@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_link_links",
+  "info": {
+    "displayName": "Links",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "richtext"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "fund": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::fund.fund"
+    }
+  }
+}

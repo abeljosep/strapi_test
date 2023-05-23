@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_rightside_right_sides",
+  "info": {
+    "displayName": "RightSide",
+    "icon": "angle-double-left",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

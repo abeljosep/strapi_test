@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_leftside_left_sides",
+  "info": {
+    "displayName": "LeftSide",
+    "icon": "angle-double-right"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "data": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

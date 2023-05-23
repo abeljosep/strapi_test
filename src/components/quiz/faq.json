@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_quiz_faqs",
+  "info": {
+    "displayName": "faq"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "Questions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "questions.question"
+    }
+  }
+}

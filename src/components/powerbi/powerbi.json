@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_powerbi_powerbis",
+  "info": {
+    "displayName": "Powerbi",
+    "icon": "chart-area",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "source": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
