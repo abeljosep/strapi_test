@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "squads",
+  "info": {
+    "singularName": "squad",
+    "pluralName": "squads",
+    "displayName": "Squad",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Team": {
+      "displayName": "Team",
+      "type": "component",
+      "repeatable": true,
+      "component": "team.team"
+    }
+  }
+}

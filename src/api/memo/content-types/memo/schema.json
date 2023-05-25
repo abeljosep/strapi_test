@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "memos",
+  "info": {
+    "singularName": "memo",
+    "pluralName": "memos",
+    "displayName": "Memo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Documents": {
+      "displayName": "Memories",
+      "type": "component",
+      "repeatable": true,
+      "component": "memories.memories"
+    }
+  }
+}

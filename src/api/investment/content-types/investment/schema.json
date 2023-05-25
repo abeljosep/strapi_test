@@ -20,12 +20,6 @@
         "images"
       ]
     },
-    "Members": {
-      "displayName": "Members",
-      "type": "component",
-      "repeatable": true,
-      "component": "member.members"
-    },
     "title": {
       "type": "string",
       "required": true

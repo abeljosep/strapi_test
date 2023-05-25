@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "frequent_askeds",
+  "info": {
+    "singularName": "frequent-asked",
+    "pluralName": "frequent-askeds",
+    "displayName": "Frequent Asked"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Faq": {
+      "displayName": "faq",
+      "type": "component",
+      "repeatable": true,
+      "component": "faq.faq"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_memories_memories",
+  "info": {
+    "displayName": "Memories",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "subtitle": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "docNumber": {
+      "max": 999,
+      "type": "integer",
+      "required": true
+    },
+    "date": {
+      "type": "date",
+      "required": false
+    },
+    "pdf": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "files"
+      ]
+    }
+  }
+}
