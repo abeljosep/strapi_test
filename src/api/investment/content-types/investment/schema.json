@@ -23,6 +23,11 @@
     "title": {
       "type": "string",
       "required": true
+    },
+    "Members": {
+      "type": "component",
+      "repeatable": true,
+      "component": "members.members"
     }
   }
 }
