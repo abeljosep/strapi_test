@@ -9,26 +9,6 @@
     "fullname": {
       "type": "string",
       "required": true
-    },
-    "picture": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ]
-    },
-    "role": {
-      "type": "string",
-      "required": true
-    },
-    "linkedin": {
-      "type": "string",
-      "required": false
-    },
-    "body": {
-      "type": "richtext",
-      "required": false
     }
   }
 }
