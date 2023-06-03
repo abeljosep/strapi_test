@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_member_item_member_items",
+  "info": {
+    "displayName": "member-item",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
