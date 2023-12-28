@@ -50,6 +50,11 @@
       "type": "component",
       "repeatable": false,
       "component": "milestone.milestones"
+    },
+    "display_fund_btn": {
+      "type": "component",
+      "repeatable": false,
+      "component": "display-fund-btn.display-fund-btn"
     }
   }
 }
