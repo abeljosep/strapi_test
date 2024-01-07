@@ -1,7 +1,8 @@
 {
   "collectionName": "components_team_teams",
   "info": {
-    "displayName": "Team"
+    "displayName": "Team",
+    "description": ""
   },
   "options": {},
   "attributes": {

@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_open_funds_open_funds",
+  "info": {
+    "displayName": "Open Funds"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "body": {
+      "type": "richtext"
+    }
+  }
+}

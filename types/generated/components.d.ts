@@ -217,6 +217,19 @@ export interface MilestoneMilestones extends Schema.Component {
   };
 }
 
+export interface OpenFundsOpenFunds extends Schema.Component {
+  collectionName: 'components_open_funds_open_funds';
+  info: {
+    displayName: 'Open Funds';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    subtitle: Attribute.String & Attribute.Required;
+    icon: Attribute.Media & Attribute.Required;
+    body: Attribute.RichText;
+  };
+}
+
 export interface PowerbiPowerbi extends Schema.Component {
   collectionName: 'components_powerbi_powerbis';
   info: {
@@ -327,6 +340,7 @@ export interface TeamTeam extends Schema.Component {
   collectionName: 'components_team_teams';
   info: {
     displayName: 'Team';
+    description: '';
   };
   attributes: {
     title: Attribute.String & Attribute.Required;
@@ -353,6 +367,7 @@ declare module '@strapi/types' {
       'members.members': MembersMembers;
       'memories.memories': MemoriesMemories;
       'milestone.milestones': MilestoneMilestones;
+      'open-funds.open-funds': OpenFundsOpenFunds;
       'powerbi.powerbi': PowerbiPowerbi;
       'profile.profiles': ProfileProfiles;
       'property.properties': PropertyProperties;

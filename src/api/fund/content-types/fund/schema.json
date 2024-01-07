@@ -39,10 +39,11 @@
     "Tabs": {
       "type": "dynamiczone",
       "components": [
-        "powerbi.powerbi",
         "info.info",
         "actives.actives",
-        "category.category"
+        "category.category",
+        "powerbi.powerbi",
+        "team.team"
       ]
     },
     "Milestone": {

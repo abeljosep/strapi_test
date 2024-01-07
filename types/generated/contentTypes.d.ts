@@ -1022,7 +1022,13 @@ export interface ApiFundFund extends Schema.CollectionType {
     body: Attribute.RichText & Attribute.Required;
     icon: Attribute.Media & Attribute.Required;
     Tabs: Attribute.DynamicZone<
-      ['powerbi.powerbi', 'info.info', 'actives.actives', 'category.category']
+      [
+        'info.info',
+        'actives.actives',
+        'category.category',
+        'powerbi.powerbi',
+        'team.team'
+      ]
     >;
     Milestone: Attribute.Component<'milestone.milestones'>;
     display_fund_btn: Attribute.Component<'display-fund-btn.display-fund-btn'>;
@@ -1264,6 +1270,37 @@ export interface ApiModalWelcomeModalWelcome extends Schema.SingleType {
   };
 }
 
+export interface ApiOpenFundOpenFund extends Schema.SingleType {
+  collectionName: 'open_funds';
+  info: {
+    singularName: 'open-fund';
+    pluralName: 'open-funds';
+    displayName: 'Open Fund';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    OpenFunds: Attribute.Component<'open-funds.open-funds', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::open-fund.open-fund',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::open-fund.open-fund',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiSlideshowSlideshow extends Schema.SingleType {
   collectionName: 'slideshows';
   info: {
@@ -1342,6 +1379,7 @@ export interface ApiTimelineTimeline extends Schema.CollectionType {
     body: Attribute.RichText;
     date: Attribute.Date & Attribute.Required;
     isTimelineSmall: Attribute.Boolean & Attribute.DefaultTo<false>;
+    image: Attribute.Media & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1424,6 +1462,7 @@ declare module '@strapi/types' {
       'api::investment.investment': ApiInvestmentInvestment;
       'api::memo.memo': ApiMemoMemo;
       'api::modal-welcome.modal-welcome': ApiModalWelcomeModalWelcome;
+      'api::open-fund.open-fund': ApiOpenFundOpenFund;
       'api::slideshow.slideshow': ApiSlideshowSlideshow;
       'api::squad.squad': ApiSquadSquad;
       'api::timeline.timeline': ApiTimelineTimeline;
