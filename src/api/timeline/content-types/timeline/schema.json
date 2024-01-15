@@ -18,7 +18,8 @@
     },
     "body": {
       "type": "richtext",
-      "required": false
+      "required": false,
+      "maxLength": 600
     },
     "date": {
       "type": "date",
@@ -30,12 +31,12 @@
       "required": false
     },
     "image": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }

@@ -12,7 +12,7 @@
     },
     "role": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "linkedin": {
       "type": "string"
@@ -21,12 +21,12 @@
       "type": "richtext"
     },
     "picture": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }

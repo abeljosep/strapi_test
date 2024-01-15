@@ -178,7 +178,7 @@ export interface MembersMembers extends Schema.Component {
   };
   attributes: {
     fullname: Attribute.String & Attribute.Required;
-    role: Attribute.String & Attribute.Required;
+    role: Attribute.String;
     linkedin: Attribute.String;
     body: Attribute.RichText;
     picture: Attribute.Media & Attribute.Required;
@@ -221,10 +221,11 @@ export interface OpenFundsOpenFunds extends Schema.Component {
   collectionName: 'components_open_funds_open_funds';
   info: {
     displayName: 'Open Funds';
+    description: '';
   };
   attributes: {
     title: Attribute.String & Attribute.Required;
-    subtitle: Attribute.String & Attribute.Required;
+    subtitle: Attribute.String;
     icon: Attribute.Media & Attribute.Required;
     body: Attribute.RichText;
   };
