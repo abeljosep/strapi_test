@@ -1378,7 +1378,7 @@ export interface ApiTimelineTimeline extends Schema.CollectionType {
     title: Attribute.Text & Attribute.Required;
     body: Attribute.RichText &
       Attribute.SetMinMaxLength<{
-        maxLength: 600;
+        maxLength: 1000;
       }>;
     date: Attribute.Date & Attribute.Required;
     isTimelineSmall: Attribute.Boolean & Attribute.DefaultTo<false>;
