@@ -1,23 +1,27 @@
-import type { Schema, Attribute } from '@strapi/strapi';
+import type { Attribute, Schema } from '@strapi/strapi';
 
 export interface ActivesActives extends Schema.Component {
   collectionName: 'components_actives_actives';
   info: {
+    description: '';
     displayName: 'Actives';
     icon: 'store-alt';
-    description: '';
   };
   attributes: {
     properties: Attribute.Component<'property.properties', true>;
+    tab_name: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 16;
+      }>;
   };
 }
 
 export interface CategoryCategory extends Schema.Component {
   collectionName: 'components_category_categories';
   info: {
+    description: '';
     displayName: 'Category';
     icon: 'file-pdf';
-    description: '';
   };
   attributes: {
     archive: Attribute.Relation<
@@ -25,6 +29,10 @@ export interface CategoryCategory extends Schema.Component {
       'oneToOne',
       'api::archive.archive'
     >;
+    tab_name: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 16;
+      }>;
   };
 }
 
@@ -45,31 +53,38 @@ export interface DisplayFundBtnDisplayFundBtn extends Schema.Component {
 export interface DocDocs extends Schema.Component {
   collectionName: 'components_doc_docs';
   info: {
-    displayName: 'docs';
     description: '';
+    displayName: 'docs';
   };
   attributes: {
-    title: Attribute.String & Attribute.Required;
-    subtitle: Attribute.String & Attribute.Required;
+    date: Attribute.Date;
     docNumber: Attribute.Integer &
       Attribute.Required &
-      Attribute.SetMinMax<{
-        max: 999;
-      }>;
-    date: Attribute.Date;
-    pdf: Attribute.Media;
+      Attribute.SetMinMax<
+        {
+          max: 999;
+        },
+        number
+      >;
+    pdf: Attribute.Media<'files'>;
+    subtitle: Attribute.String & Attribute.Required;
+    title: Attribute.String & Attribute.Required;
   };
 }
 
 export interface DocumentDocuments extends Schema.Component {
   collectionName: 'components_document_documents';
   info: {
-    displayName: 'Documents';
     description: '';
+    displayName: 'Documents';
   };
   attributes: {
-    title: Attribute.String & Attribute.Required;
     Files: Attribute.Component<'files.file', true>;
+    tab_name: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 16;
+      }>;
+    title: Attribute.String & Attribute.Required;
   };
 }
 
@@ -79,55 +94,61 @@ export interface FaqFaq extends Schema.Component {
     displayName: 'faq';
   };
   attributes: {
-    title: Attribute.String;
     Questions: Attribute.Component<'questions.question', true>;
+    title: Attribute.String;
   };
 }
 
 export interface FilesFile extends Schema.Component {
   collectionName: 'components_files_files';
   info: {
+    description: '';
     displayName: 'File';
     icon: 'file-pdf';
-    description: '';
   };
   attributes: {
-    pdf: Attribute.Media & Attribute.Required;
     name: Attribute.String & Attribute.Required;
+    pdf: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true> &
+      Attribute.Required;
   };
 }
 
 export interface GroupsGroup extends Schema.Component {
   collectionName: 'components_groups_groups';
   info: {
+    description: '';
     displayName: 'group';
     icon: 'users-cog';
-    description: '';
   };
   attributes: {
-    title: Attribute.String & Attribute.Required;
     Members: Attribute.Component<'profile.profiles', true>;
+    title: Attribute.String & Attribute.Required;
   };
 }
 
 export interface InfoInfo extends Schema.Component {
   collectionName: 'components_info_infos';
   info: {
+    description: '';
     displayName: 'Info';
     icon: 'info';
   };
   attributes: {
-    RightSide: Attribute.Component<'rightside.right-side', true>;
     LeftSide: Attribute.Component<'leftside.left-side', true>;
+    RightSide: Attribute.Component<'rightside.right-side', true>;
+    tab_name: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 16;
+      }>;
   };
 }
 
 export interface ItemItem extends Schema.Component {
   collectionName: 'components_item_items';
   info: {
+    description: '';
     displayName: 'Item';
     icon: 'check-square';
-    description: '';
   };
   attributes: {
     text: Attribute.RichText & Attribute.Required;
@@ -141,8 +162,8 @@ export interface LeftsideLeftSide extends Schema.Component {
     icon: 'angle-double-right';
   };
   attributes: {
-    title: Attribute.String & Attribute.Required;
     data: Attribute.String & Attribute.Required;
+    title: Attribute.String & Attribute.Required;
   };
 }
 
@@ -153,17 +174,17 @@ export interface LinkLinks extends Schema.Component {
     icon: 'link';
   };
   attributes: {
-    title: Attribute.RichText;
-    icon: Attribute.Media & Attribute.Required;
     fund: Attribute.Relation<'link.links', 'oneToOne', 'api::fund.fund'>;
+    icon: Attribute.Media<'images'> & Attribute.Required;
+    title: Attribute.RichText;
   };
 }
 
 export interface MemberItemMemberItem extends Schema.Component {
   collectionName: 'components_member_item_member_items';
   info: {
-    displayName: 'member-item';
     description: '';
+    displayName: 'member-item';
   };
   attributes: {
     name: Attribute.String & Attribute.Required;
@@ -173,43 +194,46 @@ export interface MemberItemMemberItem extends Schema.Component {
 export interface MembersMembers extends Schema.Component {
   collectionName: 'components_members_members';
   info: {
-    displayName: 'Members';
     description: '';
+    displayName: 'Members';
   };
   attributes: {
-    fullname: Attribute.String & Attribute.Required;
-    role: Attribute.String;
-    linkedin: Attribute.String;
     body: Attribute.RichText;
-    picture: Attribute.Media & Attribute.Required;
+    fullname: Attribute.String & Attribute.Required;
+    linkedin: Attribute.String;
+    picture: Attribute.Media<'images'> & Attribute.Required;
+    role: Attribute.String;
   };
 }
 
 export interface MemoriesMemories extends Schema.Component {
   collectionName: 'components_memories_memories';
   info: {
-    displayName: 'Memories';
     description: '';
+    displayName: 'Memories';
   };
   attributes: {
-    subtitle: Attribute.String & Attribute.Required;
-    title: Attribute.String & Attribute.Required;
+    date: Attribute.Date;
     docNumber: Attribute.Integer &
       Attribute.Required &
-      Attribute.SetMinMax<{
-        max: 999;
-      }>;
-    date: Attribute.Date;
-    pdf: Attribute.Media;
+      Attribute.SetMinMax<
+        {
+          max: 999;
+        },
+        number
+      >;
+    pdf: Attribute.Media<'files'>;
+    subtitle: Attribute.String & Attribute.Required;
+    title: Attribute.String & Attribute.Required;
   };
 }
 
 export interface MilestoneMilestones extends Schema.Component {
   collectionName: 'components_milestone_milestones';
   info: {
+    description: '';
     displayName: 'milestones';
     icon: 'seedling';
-    description: '';
   };
   attributes: {
     LeftText: Attribute.String;
@@ -220,26 +244,30 @@ export interface MilestoneMilestones extends Schema.Component {
 export interface OpenFundsOpenFunds extends Schema.Component {
   collectionName: 'components_open_funds_open_funds';
   info: {
-    displayName: 'Open Funds';
     description: '';
+    displayName: 'Open Funds';
   };
   attributes: {
-    title: Attribute.String & Attribute.Required;
-    subtitle: Attribute.String;
-    icon: Attribute.Media & Attribute.Required;
     body: Attribute.RichText;
+    icon: Attribute.Media<'images'> & Attribute.Required;
+    subtitle: Attribute.String;
+    title: Attribute.String & Attribute.Required;
   };
 }
 
 export interface PowerbiPowerbi extends Schema.Component {
   collectionName: 'components_powerbi_powerbis';
   info: {
+    description: '';
     displayName: 'Powerbi';
     icon: 'chart-area';
-    description: '';
   };
   attributes: {
     source: Attribute.String & Attribute.Required;
+    tab_name: Attribute.String &
+      Attribute.SetMinMaxLength<{
+        maxLength: 16;
+      }>;
     title: Attribute.String & Attribute.Required;
   };
 }
@@ -247,31 +275,31 @@ export interface PowerbiPowerbi extends Schema.Component {
 export interface ProfileProfiles extends Schema.Component {
   collectionName: 'components_profile_profiles';
   info: {
+    description: '';
     displayName: 'Profiles';
     icon: 'address-card';
-    description: '';
   };
   attributes: {
-    fullname: Attribute.String & Attribute.Required;
-    picture: Attribute.Media & Attribute.Required;
-    role: Attribute.String & Attribute.Required;
-    linkedin: Attribute.String;
     body: Attribute.RichText;
+    fullname: Attribute.String & Attribute.Required;
+    linkedin: Attribute.String;
+    picture: Attribute.Media<'images'> & Attribute.Required;
+    role: Attribute.String & Attribute.Required;
   };
 }
 
 export interface PropertyProperties extends Schema.Component {
   collectionName: 'components_property_properties';
   info: {
+    description: '';
     displayName: 'Properties';
     icon: 'map-signs';
-    description: '';
   };
   attributes: {
-    title: Attribute.String & Attribute.Required;
     body: Attribute.RichText & Attribute.Required;
-    thumbnail: Attribute.Media & Attribute.Required;
     subtitle: Attribute.String & Attribute.Required;
+    thumbnail: Attribute.Media<'images'> & Attribute.Required;
+    title: Attribute.String & Attribute.Required;
   };
 }
 
@@ -282,8 +310,8 @@ export interface QuestionsQuestion extends Schema.Component {
     icon: 'question';
   };
   attributes: {
-    title: Attribute.String & Attribute.Required;
     body: Attribute.RichText & Attribute.Required;
+    title: Attribute.String & Attribute.Required;
   };
 }
 
@@ -293,59 +321,59 @@ export interface QuizFaq extends Schema.Component {
     displayName: 'faq';
   };
   attributes: {
-    title: Attribute.String & Attribute.Required;
     Questions: Attribute.Component<'questions.question', true>;
+    title: Attribute.String & Attribute.Required;
   };
 }
 
 export interface RightsideRightSide extends Schema.Component {
   collectionName: 'components_rightside_right_sides';
   info: {
+    description: '';
     displayName: 'RightSide';
     icon: 'angle-double-left';
-    description: '';
   };
   attributes: {
-    title: Attribute.String & Attribute.Required;
     subtitle: Attribute.String & Attribute.Required;
+    title: Attribute.String & Attribute.Required;
   };
 }
 
 export interface SliderSlider extends Schema.Component {
   collectionName: 'components_slider_sliders';
   info: {
-    displayName: 'slider';
     description: '';
+    displayName: 'slider';
   };
   attributes: {
-    image: Attribute.Media;
-    youtube: Attribute.String;
+    image: Attribute.Media<'images'>;
     image_link: Attribute.String;
+    youtube: Attribute.String;
   };
 }
 
 export interface TabTabs extends Schema.Component {
   collectionName: 'components_tab_tabs';
   info: {
-    displayName: 'Tabs';
     description: '';
+    displayName: 'Tabs';
   };
   attributes: {
-    title: Attribute.String & Attribute.Required;
-    background: Attribute.Media & Attribute.Required;
+    background: Attribute.Media<'images'> & Attribute.Required;
     Item: Attribute.Component<'item.item', true>;
+    title: Attribute.String & Attribute.Required;
   };
 }
 
 export interface TeamTeam extends Schema.Component {
   collectionName: 'components_team_teams';
   info: {
-    displayName: 'Team';
     description: '';
+    displayName: 'Team';
   };
   attributes: {
-    title: Attribute.String & Attribute.Required;
     Members: Attribute.Component<'members.members', true>;
+    title: Attribute.String & Attribute.Required;
   };
 }
 

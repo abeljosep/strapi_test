@@ -11,6 +11,11 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::archive.archive"
+    },
+    "tab_name": {
+      "type": "string",
+      "required": false,
+      "maxLength": 16
     }
   }
 }
