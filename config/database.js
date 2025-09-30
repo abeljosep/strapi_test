@@ -12,13 +12,8 @@ module.exports = ({ env }) => ({
   connection: {
     client: 'postgres',
     connection: {
-      host: env('DB_HOST'),
-      port: env.int('DB_PORT'),
-      database: env('DB_NAME'),
-      user: env('DB_USER'),
-      password: env('DB_PASS'),
-      ssl: false,
-      schema: env('DB_SCHEMA', "public"),
+      connectionString: "postgresql://neondb_owner:npg_TO5H6AkPiopX@ep-billowing-block-a8d7tno6-pooler.eastus2.azure.neon.tech/neondb?sslmode=require&channel_binding=require",
+     schema: env('DB_SCHEMA', "public"),
     },
     debug: false,
   }
