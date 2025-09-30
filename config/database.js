@@ -18,6 +18,7 @@ module.exports = ({ env }) => ({
       user: env('DB_USER'),
       password: env('DB_PASS'),
       ssl: true,
+      schema: env('DB_SCHEMA', "public"),
     },
     debug: false,
   }
