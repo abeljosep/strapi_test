@@ -60,6 +60,9 @@
     "slug": {
       "type": "uid",
       "targetField": "title"
+    },
+    "test_slug": {
+      "type": "string"
     }
   }
 }

@@ -630,6 +630,7 @@ export interface ApiFundFund extends Schema.CollectionType {
         'team.team'
       ]
     >;
+    test_slug: Attribute.String;
     title: Attribute.String & Attribute.Required;
     updatedAt: Attribute.DateTime;
     updatedBy: Attribute.Relation<'api::fund.fund', 'oneToOne', 'admin::user'> &
